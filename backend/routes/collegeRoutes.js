@@ -9,3 +9,4 @@ router.get("/", getColleges);
 router.get("/:id", getCollegeById);
 
 module.exports = router; // ✅ This is necessary!
+router.put("/:id", collegeController.updateCollege);
