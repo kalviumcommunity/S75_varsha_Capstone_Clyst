@@ -14,3 +14,8 @@ exports.updateCollege = async (req, res) => {
   const updated = await College.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.json(updated);
 };
+exports.createCollege = async (req, res) => {
+  const college = new College(req.body);
+  await college.save();
+  res.status(201).json(college);
+};

@@ -10,3 +10,4 @@ router.get("/:id", getCollegeById);
 
 module.exports = router; // ✅ This is necessary!
 router.put("/:id", collegeController.updateCollege);
+router.post("/", collegeController.createCollege);
