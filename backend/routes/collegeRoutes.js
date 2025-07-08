@@ -1,6 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const { getColleges, getCollegeById } = require("../controllers/collegeController");
+
+// ✅ Import all needed controller functions
+const {
+  getColleges,
+  getCollegeById,
+  updateCollege,
+  createCollege
+} = require("../controllers/collegeController");
 
 // GET all colleges
 router.get("/", getColleges);
@@ -8,6 +15,11 @@ router.get("/", getColleges);
 // GET college by ID
 router.get("/:id", getCollegeById);
 
-module.exports = router; // ✅ This is necessary!
-router.put("/:id", collegeController.updateCollege);
-router.post("/", collegeController.createCollege);
+// PUT update a college
+router.put("/:id", updateCollege);
+
+// POST create a new college
+router.post("/", createCollege);
+
+// ✅ Export router at the end, after all routes
+module.exports = router;
