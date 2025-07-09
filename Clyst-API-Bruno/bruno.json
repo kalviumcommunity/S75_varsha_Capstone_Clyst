@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Clyst-API-Bruno",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
